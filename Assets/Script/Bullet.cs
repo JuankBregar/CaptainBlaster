@@ -5,6 +5,7 @@ using UnityEngine;
 public class Bullet : MonoBehaviour
 {
     public float speed = 10f;
+    public GameObject explosion;
     GameManager gameManager;
 
     // Start is called before the first frame update
@@ -22,8 +23,8 @@ public class Bullet : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        Destroy(collision.gameObject);
-        gameManager.addScore();
+        gameManager.CollisionDestroy(collision.gameObject, explosion);
         Destroy(gameObject);
+        gameManager.addScore();
     }
 }

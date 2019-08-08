@@ -64,9 +64,11 @@
   <ItemGroup>
     <Compile Include="Assets\Script\Bullet.cs" />
     <Compile Include="Assets\Script\DestroyOnTrigger.cs" />
+    <Compile Include="Assets\Script\Explosion_destroy.cs" />
     <Compile Include="Assets\Script\GameManager.cs" />
     <Compile Include="Assets\Script\MeteorMV.cs" />
     <Compile Include="Assets\Script\MeteorSpawn.cs" />
+    <Compile Include="Assets\Script\OffsetBG.cs" />
     <Compile Include="Assets\Script\ScrollBg.cs" />
     <Compile Include="Assets\Script\ShipController.cs" />
     <Reference Include="Unity.Timeline.Editor">

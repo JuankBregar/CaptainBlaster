@@ -29,6 +29,12 @@ public class GameManager : MonoBehaviour
     public void playerDied()
     {
         gameOver.enabled = true;
-        Time.timeScale = 0;
+        //Time.timeScale = 0;
+    }
+
+    public void CollisionDestroy(GameObject meteor, GameObject prefab)
+    {
+        Instantiate(prefab, meteor.transform.position, transform.rotation = Quaternion.identity);
+        Destroy(meteor.gameObject);
     }
 }

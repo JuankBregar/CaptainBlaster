@@ -4,8 +4,9 @@ using UnityEngine;
 
 public class ShipController : MonoBehaviour
 {
-    public GameManager GameManager;
+    public GameManager gameManager;
     public GameObject bulletPrefab;
+    public GameObject explosionPrefab;
     public float speed = 10f;
     public float xLimit = 7f;
     public float reloadTime = 0.5f;
@@ -14,7 +15,7 @@ public class ShipController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
@@ -36,8 +37,10 @@ public class ShipController : MonoBehaviour
     //End game
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        GameManager.playerDied();
+        gameManager.CollisionDestroy(gameObject, explosionPrefab);
+        gameManager.playerDied();
     }
+
 
     void Fire()
     {
