@@ -155,3 +155,6 @@ MonoBehaviour:
   speed: 10
   explosion: {fileID: 8937089026562250927, guid: ca39740ce47a8ca45a312143e683a953,
     type: 3}
+  longExplosion: {fileID: 5068134192600668604, guid: 7cfe60e6b15b10244957fb929b80382c,
+    type: 3}
+  chunks: {fileID: 6781990600374213980, guid: 9f5eba7f7c567184394d0924564880cc, type: 3}

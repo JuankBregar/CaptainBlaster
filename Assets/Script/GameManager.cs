@@ -37,4 +37,23 @@ public class GameManager : MonoBehaviour
         Instantiate(prefab, meteor.transform.position, transform.rotation = Quaternion.identity);
         Destroy(meteor.gameObject);
     }
+
+    public void CollisionDestroy(GameObject meteor, GameObject prefab, GameObject chunks)
+    {
+        Instantiate(prefab, meteor.transform.position, transform.rotation = Quaternion.identity);
+        //Instantiate chunks radial
+        chunks.GetComponent<MeteorMV>().ySpeed = -6;
+
+        chunks.GetComponent<MeteorMV>().xSpeed = -6;
+        Instantiate(chunks, meteor.transform.position, Quaternion.identity);
+        chunks.GetComponent<MeteorMV>().xSpeed = -3;
+        Instantiate(chunks, meteor.transform.position, Quaternion.identity);
+        chunks.GetComponent<MeteorMV>().xSpeed = 0;
+        Instantiate(chunks, meteor.transform.position, Quaternion.identity);
+        chunks.GetComponent<MeteorMV>().xSpeed = 3;
+        Instantiate(chunks, meteor.transform.position, Quaternion.identity);
+        chunks.GetComponent<MeteorMV>().xSpeed = 6;
+        Instantiate(chunks, meteor.transform.position, Quaternion.identity);
+        Destroy(meteor.gameObject);
+    }
 }

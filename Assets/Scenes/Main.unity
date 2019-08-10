@@ -377,8 +377,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4584122c37768704cbf413541c8b2581, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  meteorPrefab: {fileID: 2715645699550253545, guid: a7b89f674d4fb3146890101a9bcb6b71,
-    type: 3}
+  meteorsPrefabs:
+  - prefab: {fileID: 2715645699550253545, guid: a7b89f674d4fb3146890101a9bcb6b71,
+      type: 3}
+    spawnTime: 0
+    isEnabled: 0
+  - prefab: {fileID: 4918456068141959106, guid: 3a00ae57c700fb14ca880d10bb341757,
+      type: 3}
+    spawnTime: 0
+    isEnabled: 0
+  - prefab: {fileID: 4949168350265668428, guid: 45979b0928e679140b5c51ae5485abfe,
+      type: 3}
+    spawnTime: 0
+    isEnabled: 0
+  - prefab: {fileID: 7196845739610172095, guid: fe6113bad22d4dd438600864b7218db5,
+      type: 3}
+    spawnTime: 0
+    isEnabled: 0
   minSpawnDelay: 1
   maxSpawnDelay: 3
   xLimit: 6
