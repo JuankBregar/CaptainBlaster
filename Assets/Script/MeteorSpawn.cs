@@ -25,28 +25,29 @@ public class MeteorSpawn : MonoBehaviour
     {
         float random = Random.Range(-xLimit, xLimit);
         Vector3 spawnPos = transform.position + new Vector3(random, 0f, 0f);
-        Instantiate(meteorsPrefabs[Random.Range(0,meteorsPrefabs.Length)].prefab, spawnPos, Quaternion.identity);
-
+        //Instantiate(meteorsPrefabs[Random.Range(0, meteorsPrefabs.Length)].prefab, spawnPos, Quaternion.identity);
+        Instantiate(GetMeAMeteor(), spawnPos, Quaternion.identity);
         Invoke("Spawn", Random.Range(minSpawnDelay, maxSpawnDelay));
     }
 
-    //Chunks for planet explosion
-    //void spawnchunks()
-    //{
-    //    float random = Random.Range(-xLimit, xLimit);
-    //    Vector3 spawnPos = transform.position + new Vector3(random, 0f, 0f);
-    //    chunks.GetComponent<MeteorMV>().ySpeed = -6;
-    //    chunks.GetComponent<MeteorMV>().xSpeed = -6;
-    //    Instantiate(chunks, spawnPos, Quaternion.identity);
-    //    chunks.GetComponent<MeteorMV>().xSpeed = -3;
-    //    Instantiate(chunks, spawnPos, Quaternion.identity);
-    //    chunks.GetComponent<MeteorMV>().xSpeed = 0;
-    //    Instantiate(chunks, spawnPos, Quaternion.identity);
-    //    chunks.GetComponent<MeteorMV>().xSpeed = 3;
-    //    Instantiate(chunks, spawnPos, Quaternion.identity);
-    //    chunks.GetComponent<MeteorMV>().xSpeed = 6;
-    //    Instantiate(chunks, spawnPos, Quaternion.identity);
-    //    Invoke("spawnchunks", 10);
-    //}
+    GameObject GetMeAMeteor()
+    {
+        //First add current time to all meteor objects
+        for (int i = 0; i < meteorsPrefabs.Length; i++)
+        {
+            meteorsPrefabs[i].currentTime += Time.deltaTime;
+        }
+        //Pick a random meteor object
+        Meteor meteor = meteorsPrefabs[Random.Range(0, meteorsPrefabs.Length)];
+        //Check if can be spawned
+        if (meteor.isEnabled && meteor.spawnTime <= meteor.currentTime)
+        {
+            //Set the meteor current time to 0
+            meteor.currentTime = 0;
+            return meteor.prefab;
+        }
+        else
+            return GetMeAMeteor();
 
+    }
 }

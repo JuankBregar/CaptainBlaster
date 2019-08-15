@@ -8,11 +8,6 @@ public class Meteor
     public GameObject prefab;
     public float spawnTime;
     public bool isEnabled;
-
-    public Meteor(GameObject prefab, float spawnTime, bool enabled)
-    {
-        this.prefab = prefab;
-        this.spawnTime = spawnTime;
-        this.isEnabled = enabled;
-    }
+    [System.NonSerialized]
+    public float currentTime = 0;
 }

@@ -42,8 +42,23 @@ public class GameManager : MonoBehaviour
     {
         Instantiate(prefab, meteor.transform.position, transform.rotation = Quaternion.identity);
         //Instantiate chunks radial
-        chunks.GetComponent<MeteorMV>().ySpeed = -6;
+        Vector3 pos1 = meteor.transform.position;
+        pos1.y -= 0.1f;
 
+        chunks.GetComponent<MeteorMV>().maxYSpeed = -6;
+
+        chunks.GetComponent<MeteorMV>().xSpeed = -6;
+        Instantiate(chunks, pos1, Quaternion.identity);
+        chunks.GetComponent<MeteorMV>().xSpeed = -3;
+        Instantiate(chunks, pos1, Quaternion.identity);
+        chunks.GetComponent<MeteorMV>().xSpeed = 0;
+        Instantiate(chunks, pos1, Quaternion.identity);
+        chunks.GetComponent<MeteorMV>().xSpeed = 3;
+        Instantiate(chunks, pos1, Quaternion.identity);
+        chunks.GetComponent<MeteorMV>().xSpeed = 6;
+        Instantiate(chunks, pos1, Quaternion.identity);
+
+        chunks.GetComponent<MeteorMV>().maxYSpeed = 6;
         chunks.GetComponent<MeteorMV>().xSpeed = -6;
         Instantiate(chunks, meteor.transform.position, Quaternion.identity);
         chunks.GetComponent<MeteorMV>().xSpeed = -3;
@@ -54,6 +69,10 @@ public class GameManager : MonoBehaviour
         Instantiate(chunks, meteor.transform.position, Quaternion.identity);
         chunks.GetComponent<MeteorMV>().xSpeed = 6;
         Instantiate(chunks, meteor.transform.position, Quaternion.identity);
+
+        Instantiate(chunks, meteor.transform.position, Quaternion.identity);
+
+
         Destroy(meteor.gameObject);
     }
 }
