@@ -134,6 +134,7 @@ MonoBehaviour:
   xSpeed: 0
   maxYSpeed: -8
   minYSpeed: -2
+  points: 2
 --- !u!50 &4949168350265668418
 Rigidbody2D:
   serializedVersion: 4

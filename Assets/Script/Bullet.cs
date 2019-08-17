@@ -25,12 +25,17 @@ public class Bullet : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if(collision.gameObject.tag== "planet")
+        if(collision.gameObject.tag== "planet" && this.gameObject.tag == "rocket")
+        {
+            gameManager.addScore(collision.gameObject.GetComponent<MeteorMV>().points);
             gameManager.CollisionDestroy(collision.gameObject,longExplosion, chunks );
-        else
+        }
+        else if(collision.gameObject.tag != "planet")
+        {
+            gameManager.addScore(collision.gameObject.GetComponent<MeteorMV>().points);
             gameManager.CollisionDestroy(collision.gameObject, explosion);
-
+        }
+    
         Destroy(gameObject);
-        gameManager.addScore();
     }
 }

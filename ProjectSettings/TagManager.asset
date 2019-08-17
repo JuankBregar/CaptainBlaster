@@ -6,6 +6,8 @@ TagManager:
   tags:
   - planet
   - meteor
+  - bullet
+  - rocket
   layers:
   - Default
   - TransparentFX

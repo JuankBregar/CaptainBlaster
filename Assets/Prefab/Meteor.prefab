@@ -153,5 +153,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   xSpeed: 0
-  maxYSpeed: -6
+  maxYSpeed: -10
   minYSpeed: -2

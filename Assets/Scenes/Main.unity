@@ -462,7 +462,7 @@ MonoBehaviour:
     isEnabled: 1
   - prefab: {fileID: 7196845739610172095, guid: fe6113bad22d4dd438600864b7218db5,
       type: 3}
-    spawnTime: 2
+    spawnTime: 0.4
     isEnabled: 1
   minSpawnDelay: 0.5
   maxSpawnDelay: 1.5
@@ -654,13 +654,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gameManager: {fileID: 920402886}
-  bulletPrefab: {fileID: 2243648687779987761, guid: f2dfdcfb1080c7244bb8ee78b431d95c,
-    type: 3}
+  bulletPrefab:
+  - prefab: {fileID: 2243648687779987761, guid: f2dfdcfb1080c7244bb8ee78b431d95c,
+      type: 3}
+    spawnTime: 0.25
+    isEnabled: 1
+  - prefab: {fileID: 1189818369652958159, guid: 6dde1aee6d9a8ae4b8f9efa7a29f45fe,
+      type: 3}
+    spawnTime: 1
+    isEnabled: 1
   explosionPrefab: {fileID: 1502726083291036995, guid: 83a71946b3ca2394eb2eb31a6e7327cb,
     type: 3}
   speed: 10
   xLimit: 7
-  reloadTime: 0.5
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0

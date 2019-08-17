@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &4918456068141959106
+--- !u!1 &1189818369652958159
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,40 +8,40 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 4918456068141959096}
-  - component: {fileID: 4918456068141959111}
-  - component: {fileID: 4918456068141959110}
-  - component: {fileID: 4918456068141959109}
-  - component: {fileID: 4918456068141959108}
-  - component: {fileID: 4918456068141959107}
+  - component: {fileID: 1189818369652958156}
+  - component: {fileID: 1189818369652958157}
+  - component: {fileID: 1189818369652958158}
+  - component: {fileID: 5846322353077010803}
+  - component: {fileID: 296823392747993669}
+  - component: {fileID: 8148371779915479938}
   m_Layer: 0
-  m_Name: Meteor_cube
-  m_TagString: meteor
+  m_Name: rocket
+  m_TagString: rocket
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4918456068141959096
+--- !u!4 &1189818369652958156
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4918456068141959106}
+  m_GameObject: {fileID: 1189818369652958159}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -5.3787847, y: -1.3276553, z: 0}
-  m_LocalScale: {x: 2, y: 2, z: 2}
+  m_LocalPosition: {x: -2.09, y: -4.17, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!212 &4918456068141959111
+--- !u!212 &1189818369652958157
 SpriteRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4918456068141959106}
+  m_GameObject: {fileID: 1189818369652958159}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
@@ -72,29 +72,29 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: -3501718977236787393, guid: 52ff30d82e7545d4a87d5a94aaf17f5d,
+  m_Sprite: {fileID: 3779044851662980046, guid: 7bedc1831fa9bff4089c0ef814c010f7,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 0.32, y: 0.32}
+  m_Size: {x: 0.25, y: 0.6}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!95 &4918456068141959110
+--- !u!95 &1189818369652958158
 Animator:
   serializedVersion: 3
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4918456068141959106}
+  m_GameObject: {fileID: 1189818369652958159}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 1916269a9a93fc34b84894de3538a968, type: 2}
+  m_Controller: {fileID: 9100000, guid: 3af046d8e0052ea41938cdd021f9b0f4, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -103,14 +103,14 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!50 &4918456068141959109
+--- !u!50 &5846322353077010803
 Rigidbody2D:
   serializedVersion: 4
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4918456068141959106}
+  m_GameObject: {fileID: 1189818369652958159}
   m_BodyType: 0
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
@@ -124,13 +124,31 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!60 &4918456068141959108
-PolygonCollider2D:
+--- !u!114 &296823392747993669
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4918456068141959106}
+  m_GameObject: {fileID: 1189818369652958159}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 93dfb27a75b5e3b4495d53e826854528, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 10
+  explosion: {fileID: 8937089026562250927, guid: ca39740ce47a8ca45a312143e683a953,
+    type: 3}
+  longExplosion: {fileID: 5068134192600668604, guid: 7cfe60e6b15b10244957fb929b80382c,
+    type: 3}
+  chunks: {fileID: 6781990600374213980, guid: 9f5eba7f7c567184394d0924564880cc, type: 3}
+--- !u!70 &8148371779915479938
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1189818369652958159}
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
@@ -138,40 +156,5 @@ PolygonCollider2D:
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.32, y: 0.32}
-    newSize: {x: 0.32, y: 0.32}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  m_Points:
-    m_Paths:
-    - - {x: -0.02, y: 0.16}
-      - {x: -0.08237052, y: 0.13474154}
-      - {x: -0.14999999, y: 0.06}
-      - {x: -0.14999999, y: -0.06}
-      - {x: -0.06, y: -0.16}
-      - {x: 0.08913851, y: -0.15491384}
-      - {x: 0.14474177, y: -0.09491384}
-      - {x: 0.15237069, y: 0.08185387}
-      - {x: 0.06491375, y: 0.14474148}
---- !u!114 &4918456068141959107
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4918456068141959106}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 36c89566882df8a428d1524b5e4df452, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  xSpeed: 0
-  maxYSpeed: -4
-  minYSpeed: -2
-  fixedSpeed: -2
-  isFixed: 0
+  m_Size: {x: 0.33, y: 1.48}
+  m_Direction: 0

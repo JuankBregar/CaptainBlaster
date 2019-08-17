@@ -20,9 +20,9 @@ public class GameManager : MonoBehaviour
 
     }
 
-    public void addScore()
+    public void addScore(int score =1)
     {
-        userScore++;
+        userScore+=score;
         scoreText.text = userScore.ToString();
     }
 
